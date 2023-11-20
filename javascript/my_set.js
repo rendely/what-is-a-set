@@ -24,7 +24,7 @@ class MySet {
 
   // return number of elements in MySet
   size() {
-    
+    return Object.keys(this.data).length;
   }
 
   // add an item to MySet as is
@@ -56,7 +56,7 @@ class MySet {
 
 if (require.main === module) {
   const ms = new MySet('hello');
-  console.log(ms.data);
+  console.log(ms.size());
 }
 
 module.exports = MySet;
