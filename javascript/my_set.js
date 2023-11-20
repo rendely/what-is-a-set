@@ -31,19 +31,32 @@ class MySet {
   // don't worry about arrays here!
   // return the MySet instance
   add(item) {
-
+    if (!this.data[item]) {
+      this.data[item] = true;
+    }
+    return this;
   }
 
   // delete an item from MySet
   // don't worry about arrays here!
   // return true if successful, otherwise false
   delete(item) {
-
+    if (this.data[item]) {
+      this.data[item] = undefined;
+      return true; 
+    }else{
+      return false;
+    }
   }
 
   // return true if in MySet, otherwise false
   // don't worry about arrays here!
   has(item) {
+    if (this.data[item]) {
+      return true; 
+    }else{
+      return false;
+    }
 
   }
 
